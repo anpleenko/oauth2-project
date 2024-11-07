@@ -51,12 +51,12 @@ services:
     command: --config /oauth2-proxy.cfg
     hostname: oauth2-proxy
     volumes:
-      - "./oauth2-proxy/oauth2-proxy-keycloak.cfg:/oauth2-proxy.cfg"
+      - './oauth2-proxy/oauth2-proxy-keycloak.cfg:/oauth2-proxy.cfg'
     restart: unless-stopped
     networks:
       - microservices
     extra_hosts:
-     - "localhost:172.18.0.5"
+      - 'localhost:172.18.0.5'
 
   keycloak:
     container_name: keycloak
@@ -75,7 +75,7 @@ services:
       KC_DB: postgres
       KC_DB_USERNAME: postgres
       KC_DB_PASSWORD: postgres
-      KC_DB_URL: "jdbc:postgresql://postgres:5432/postgres"
+      KC_DB_URL: 'jdbc:postgresql://postgres:5432/postgres'
     ports:
       - 9080:9080
     networks:
@@ -86,14 +86,14 @@ services:
     container_name: postgres
     image: postgres:15-alpine
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postgres"]
+      test: ['CMD', 'pg_isready', '-U', 'postgres']
     restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
     ports:
-      - "5432:5432"
+      - '5432:5432'
     volumes:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
@@ -115,6 +115,6 @@ volumes:
   mongodb_data:
     driver: local
   postgresql:
-      driver: local
+    driver: local
   postgresql_data:
-      driver: local
+    driver: local

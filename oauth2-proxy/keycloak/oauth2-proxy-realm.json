@@ -57,9 +57,7 @@
         "description": "${role_admin}",
         "composite": true,
         "composites": {
-          "realm": [
-            "create-realm"
-          ],
+          "realm": ["create-realm"],
           "client": {
             "oauth2-proxy-realm": [
               "query-groups",
@@ -229,10 +227,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "oauth2-proxy-realm": [
-                "query-groups",
-                "query-users"
-              ]
+              "oauth2-proxy-realm": ["query-groups", "query-users"]
             }
           },
           "clientRole": true,
@@ -273,9 +268,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "oauth2-proxy-realm": [
-                "query-clients"
-              ]
+              "oauth2-proxy-realm": ["query-clients"]
             }
           },
           "clientRole": true,
@@ -309,9 +302,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "account": [
-                "view-consent"
-              ]
+              "account": ["view-consent"]
             }
           },
           "clientRole": true,
@@ -361,9 +352,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "account": [
-                "manage-account-links"
-              ]
+              "account": ["manage-account-links"]
             }
           },
           "clientRole": true,
@@ -374,27 +363,17 @@
     }
   },
   "groups": [],
-  "defaultRoles": [
-    "offline_access",
-    "uma_authorization"
-  ],
-  "requiredCredentials": [
-    "password"
-  ],
+  "defaultRoles": ["offline_access", "uma_authorization"],
+  "requiredCredentials": ["password"],
   "otpPolicyType": "totp",
   "otpPolicyAlgorithm": "HmacSHA1",
   "otpPolicyInitialCounter": 0,
   "otpPolicyDigits": 6,
   "otpPolicyLookAheadWindow": 1,
   "otpPolicyPeriod": 30,
-  "otpSupportedApplications": [
-    "FreeOTP",
-    "Google Authenticator"
-  ],
+  "otpSupportedApplications": ["FreeOTP", "Google Authenticator"],
   "webAuthnPolicyRpEntityName": "keycloak",
-  "webAuthnPolicySignatureAlgorithms": [
-    "ES256"
-  ],
+  "webAuthnPolicySignatureAlgorithms": ["ES256"],
   "webAuthnPolicyRpId": "",
   "webAuthnPolicyAttestationConveyancePreference": "not specified",
   "webAuthnPolicyAuthenticatorAttachment": "not specified",
@@ -404,9 +383,7 @@
   "webAuthnPolicyAvoidSameAuthenticatorRegister": false,
   "webAuthnPolicyAcceptableAaguids": [],
   "webAuthnPolicyPasswordlessRpEntityName": "keycloak",
-  "webAuthnPolicyPasswordlessSignatureAlgorithms": [
-    "ES256"
-  ],
+  "webAuthnPolicyPasswordlessSignatureAlgorithms": ["ES256"],
   "webAuthnPolicyPasswordlessRpId": "",
   "webAuthnPolicyPasswordlessAttestationConveyancePreference": "not specified",
   "webAuthnPolicyPasswordlessAuthenticatorAttachment": "not specified",
@@ -418,18 +395,14 @@
   "scopeMappings": [
     {
       "clientScope": "offline_access",
-      "roles": [
-        "offline_access"
-      ]
+      "roles": ["offline_access"]
     }
   ],
   "clientScopeMappings": {
     "account": [
       {
         "client": "account-console",
-        "roles": [
-          "manage-account"
-        ]
+        "roles": ["manage-account"]
       }
     ]
   },
@@ -445,13 +418,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "0896a464-da81-4454-bee9-b56bdbad9e7f",
-      "defaultRoles": [
-        "view-profile",
-        "manage-account"
-      ],
-      "redirectUris": [
-        "/realms/oauth2-proxy/account/*"
-      ],
+      "defaultRoles": ["view-profile", "manage-account"],
+      "redirectUris": ["/realms/oauth2-proxy/account/*"],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -492,9 +460,7 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "91f85142-ee18-4e30-9949-e5acb701bdee",
-      "redirectUris": [
-        "/realms/oauth2-proxy/account/*"
-      ],
+      "redirectUris": ["/realms/oauth2-proxy/account/*"],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -660,9 +626,7 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "72341b6d-7065-4518-a0e4-50ee15025608",
-      "redirectUris": [
-        "http://localhost/oauth2/callback"
-      ],
+      "redirectUris": ["http://localhost/oauth2/callback"],
       "webOrigins": ["http://localhost:3000", "http://localhost"],
       "notBefore": 0,
       "bearerOnly": false,
@@ -717,12 +681,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "b234b7aa-8417-410f-b3fd-c57434d3aa4a",
-      "redirectUris": [
-        "/admin/oauth2-proxy/console/*"
-      ],
-      "webOrigins": [
-        "+"
-      ],
+      "redirectUris": ["/admin/oauth2-proxy/console/*"],
+      "webOrigins": ["+"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -1280,9 +1240,7 @@
   },
   "smtpServer": {},
   "eventsEnabled": false,
-  "eventsListeners": [
-    "jboss-logging"
-  ],
+  "eventsListeners": ["jboss-logging"],
   "enabledEventTypes": [],
   "adminEventsEnabled": false,
   "adminEventsDetailsEnabled": false,
@@ -1314,12 +1272,8 @@
         "subType": "anonymous",
         "subComponents": {},
         "config": {
-          "host-sending-registration-request-must-match": [
-            "true"
-          ],
-          "client-uris-must-match": [
-            "true"
-          ]
+          "host-sending-registration-request-must-match": ["true"],
+          "client-uris-must-match": ["true"]
         }
       },
       {
@@ -1356,9 +1310,7 @@
         "subType": "anonymous",
         "subComponents": {},
         "config": {
-          "allow-default-scopes": [
-            "true"
-          ]
+          "allow-default-scopes": ["true"]
         }
       },
       {
@@ -1376,9 +1328,7 @@
         "subType": "anonymous",
         "subComponents": {},
         "config": {
-          "max-clients": [
-            "200"
-          ]
+          "max-clients": ["200"]
         }
       },
       {
@@ -1388,9 +1338,7 @@
         "subType": "authenticated",
         "subComponents": {},
         "config": {
-          "allow-default-scopes": [
-            "true"
-          ]
+          "allow-default-scopes": ["true"]
         }
       }
     ],
@@ -1401,15 +1349,9 @@
         "providerId": "aes-generated",
         "subComponents": {},
         "config": {
-          "kid": [
-            "6c7d982e-372f-49c6-a4f3-5c451fb85eca"
-          ],
-          "secret": [
-            "yH6M3W7aOgh2_cKJ0srWbw"
-          ],
-          "priority": [
-            "100"
-          ]
+          "kid": ["6c7d982e-372f-49c6-a4f3-5c451fb85eca"],
+          "secret": ["yH6M3W7aOgh2_cKJ0srWbw"],
+          "priority": ["100"]
         }
       },
       {
@@ -1418,18 +1360,12 @@
         "providerId": "hmac-generated",
         "subComponents": {},
         "config": {
-          "kid": [
-            "587f0fb5-845d-4b45-87a0-84145092aaef"
-          ],
+          "kid": ["587f0fb5-845d-4b45-87a0-84145092aaef"],
           "secret": [
             "PuH8Lxh9GeNfGJRDk34SWIlBDdrJpC3U3SfcxqqQtlIf2DBzRKUu8VbDVrmMN5b5CoPsJhrQ2SVb-iE9Lzsb3A"
           ],
-          "priority": [
-            "100"
-          ],
-          "algorithm": [
-            "HS256"
-          ]
+          "priority": ["100"],
+          "algorithm": ["HS256"]
         }
       },
       {
@@ -1444,9 +1380,7 @@
           "certificate": [
             "MIICmzCCAYMCBgFygL/j4DANBgkqhkiG9w0BAQsFADARMQ8wDQYDVQQDDAZtYXN0ZXIwHhcNMjAwNjA0MTkxMDU4WhcNMzAwNjA0MTkxMjM4WjARMQ8wDQYDVQQDDAZtYXN0ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN2jYdnmu42chuRJ4B8Vils+8nDe+3P9W4ol6sLiZRdh3upEyGzdUslneYXJ4K47xbzW+QasWIL0pCdfaUePZ20D9FYQnDlunP4l04Wvmm9eDSVDSxr6Guj1p9YPKBNTgWYuwSLnP3zzjtNsfXvxFPqfv4lWpn2NhT2tKnBVMLwT/jLFK5K2aEYJwCRnp0aEc0F28ZSDDEpiPt1gtEmIj6eKUh0q7E/PEj9hnFmdcEcN1s1cmAPKZNA+63306cHF5lsffwInUw2jdV1XV/M4wZQd76+f8Q4PkT6lcLw/C8mdZT5cdRMVVl7Ihd6GHelgtSyr/ptnUxiwRoUiHOc6TDAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAIAqydMYxa51kNEyfXyR2kStlglE4LDeLBLHDABeBPE0eN2awoH/mw3kXS4OA/C0e3c7bAwViOzOVERGeUNiBvP5rL1Amuu97nwFcxhkTaJH4ZwCGkxceaIo9LNDpAEesqHLQSdplFXIA4TbEFoKMem4k31KVU7i9/rUesrSRmxLptIOK7LLvRMYiY/t7tdAvoZAtoliuQlFKQywEuxXQrCkcoVEAARABWGt0rsWC2xK0tVxHRIrENwvMp/aUYd17sZ0403aaS9dlvfQ63ExnaHd+++RJtPku8P220Tw27YVmFAwzJgS0aUpEaDsgRNz6OMSyxEg/n7eKK08aU3szwQ="
           ],
-          "priority": [
-            "100"
-          ]
+          "priority": ["100"]
         }
       }
     ]
