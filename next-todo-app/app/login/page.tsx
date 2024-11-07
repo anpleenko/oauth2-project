@@ -12,7 +12,7 @@ export default function Page() {
                 <img src="https://icons.iconarchive.com/icons/gartoon-team/gartoon-apps/256/gtodo-todo-list-icon.png" alt="logo"/>
                 <Link href="http://localhost/oauth2/start?rd=http%3A%2F%2Flocalhost%3A3000%2F">
                     <Button className="flex justify-center items-center"><LockClosedIcon
-                        className="w-5 h-5 mr-2"/> Login with Google</Button>
+                        className="w-5 h-5 mr-2"/> Login with Keycloak</Button>
                 </Link>
             </div>
         </div>
