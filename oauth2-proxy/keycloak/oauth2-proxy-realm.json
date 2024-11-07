@@ -663,7 +663,7 @@
       "redirectUris": [
         "http://localhost/oauth2/callback"
       ],
-      "webOrigins": [],
+      "webOrigins": ["http://localhost:3000", "http://localhost"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
