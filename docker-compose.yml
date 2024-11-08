@@ -56,7 +56,7 @@ services:
     networks:
       - microservices
     extra_hosts:
-      - 'localhost:172.18.0.5'
+      - 'localhost:172.18.0.9'
 
   keycloak:
     container_name: keycloak
@@ -99,6 +99,17 @@ services:
       - postgresql_data:/var/lib/postgresql/data
     networks:
       - microservices
+
+  cors:
+    build:
+      context: ./nginx-cors
+      dockerfile: Dockerfile
+    container_name: cors
+    ports:
+      - '9090:9090'
+    networks:
+      microservices:
+        ipv4_address: 172.18.0.9
 
 networks:
   microservices:
